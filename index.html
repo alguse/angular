@@ -1,10 +1,32 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Angular</title>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
   </head>
-  <body>
-    angular test
-  </body>
+<body  ng-app="Assigment1">
+   <div class="container" ng-controller="Assigment1Ctrl">
+     <h1>Lunch Checker</h1>
+
+         <div class="form-group">
+             <input ng-model="lunchMenu" type="text"
+             placeholder="list comma separated dishes you usually have for lunch"
+             class="form-control">
+             Not considering and empty item (i.e., , ,) as an item towards to the final count
+         </div>
+         <div class="form-group">
+             <button ng-click="checkFood()" class="btn btn-default">Check If Too Much</button>
+         </div>
+         <div class="form-group message">
+           {{response}}
+         </div>
+   </div>
+
+   <script type="text/javascript" src="angular.min.js"></script>
+   <script src="app.js"></script>
+</body>
 </html>
